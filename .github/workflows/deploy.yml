@@ -11,25 +11,42 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: install yarn
+
+      - name: Install yarn
         run: npm install yarn -g
+
       - run: yarn install
       - run: yarn build
-      - run: yarn m3u
+
+      - name: Fetch and generate M3U sources
+        run: yarn m3u
+        env:
+          ENABLE_STREAM_CHECK: "true"
+          STREAM_CHECK_TIMEOUT: "5000"
+          STREAM_CHECK_CONCURRENCY: "30"
+
       - run: yarn matrix
 
       - name: "Jekyll theme"
         run: mv ./_config.temp.yml ./m3u/_config.yml
+
+      - name: Upload aggregated artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: aggregated-iptv
+          path: |
+            m3u/aggregated.m3u
+            m3u/txt/aggregated.txt
+          retention-days: 30
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

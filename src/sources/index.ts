@@ -6,6 +6,10 @@ export * from "./fanmingming_live"
 export * from "./qwerttvv_bj_iptv"
 export * from "./joevess_iptv"
 export * from "./cymz6_lives"
+export * from "./vbskycn_iptv"
+export * from "./zhi35_iptv"
+export * from "./guovin_iptv"
+export * from "./ssili126_tv"
 export * from "./utils"
 
 import {
@@ -17,7 +21,11 @@ import {
     fanmingming_live_sources,
     qwerttvv_bj_iptv_sources,
     joevess_iptv_sources,
-    cymz6_lives_sources
+    cymz6_lives_sources,
+    vbskycn_iptv_sources,
+    zhi35_iptv_sources,
+    guovin_iptv_sources,
+    ssili126_tv_sources
 } from "."
 
 export const sources = [
@@ -30,4 +38,8 @@ export const sources = [
     ...iptv_org_stream_sources,
     ...epg_pw_sources,
     ...qwerttvv_bj_iptv_sources,
+    ...vbskycn_iptv_sources,
+    ...zhi35_iptv_sources,
+    ...guovin_iptv_sources,
+    ...ssili126_tv_sources,
 ]

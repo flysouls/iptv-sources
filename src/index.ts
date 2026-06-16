@@ -18,6 +18,7 @@ import { epgs_sources } from "./epgs"
 import { writeTvBoxJson } from "./tvbox"
 import { Collector } from "./utils"
 import { runCustomTask } from "./task/custom"
+import { aggregate } from "./aggregate"
 
 cleanFiles()
 
@@ -162,6 +163,10 @@ Promise.allSettled(
     .then(() => {
         console.log(`[TASK] Make custom sources`)
         runCustomTask()
+    })
+    .then(async () => {
+        console.log(`[TASK] Aggregate all sources`)
+        await aggregate()
     })
     .catch((err) => {
         console.error(err)
