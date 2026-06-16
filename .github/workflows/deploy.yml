@@ -4,21 +4,26 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
 
       - name: Install yarn
@@ -37,7 +42,16 @@ jobs:
       - run: yarn matrix
 
       - name: "Jekyll theme"
-        run: mv ./_config.temp.yml ./m3u/_config.yml
+        run: cp ./_config.temp.yml ./m3u/_config.yml
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./m3u
+          destination: ./_site
 
       - name: Upload aggregated artifacts
         uses: actions/upload-artifact@v4
@@ -48,16 +62,16 @@ jobs:
             m3u/txt/aggregated.txt
           retention-days: 30
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./m3u
-          enable_jekyll: true
-          cname: m3u.ibert.me
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
 
-      - name: discord
-        uses: HerbertHe/discord-action@v1
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message: ${{ github.repository }} has been successfullly updated, see https://m3u.ibert.me to get more.
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
