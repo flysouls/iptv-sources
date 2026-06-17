@@ -2,6 +2,7 @@
 [BD]chc高清电影[ipv6],https://epg.pw/stream/3b471ad5f1aa57bac299045428922c098b2f6204a72ef8428b398db14eaa5c96.m3u8
 [BD]ado_tv,https://epg.pw/stream/e7f3ffd27c48eceda7090ba124403776da5ee427ed1fb35f010b3050727b9e96.m3u8
 [BD]newtv潮妈辣婆[ipv6],https://epg.pw/stream/b8b258c3f487a0ca6e3485c53298c0c86cba21b9603aecc6b36a1fec95e6db85.m3u8
+[BD]newtv军旅剧场[ipv6],https://epg.pw/stream/189da59a4ede23964b9effa3cfb8a7a77da2a8c6d5d4bcfd6ebb82c7d92f3049.m3u8
 [VGA]吉林影视,https://epg.pw/stream/64c6da042a172abe0b223936e2b7d91d4109fa5c8e416b5bb7a265e36e0f43d7.m3u8
 [HD]山西影视,https://epg.pw/stream/b493ddd1a113751d7924062be602f98313d60185dea9c5ffd516f727300f4a58.m3u8
 [BD]欢笑剧场[ipv6],https://epg.pw/stream/c26de373680830b38e7b3f0da2f920353f298e3369addfe68b8e4a2e3811a12b.m3u8
@@ -40,9 +41,14 @@
 [BD]魅力足球,https://epg.pw/stream/100f8d10fb39d11544e9f834c30dd5a57e92915f801d8e9bf50bf0f01345bef7.m3u8
 [BD]风云足球[ipv6],https://epg.pw/stream/20c329c5ad4872f9416783144b091c3943c94538393e0fc5f60bc551a06dd372.m3u8
 
+综艺,#genre#
+[HD]南京娱乐,https://epg.pw/stream/57c3c89e2d181de4c83fee8fba9a0bc8e60c27af3b834a87b96380fb000b28ed.m3u8
+[BD]乐游频道[ipv6],https://epg.pw/stream/6f6107ff61b3d0a4bbb48c64dda6dde9db12477770ea727b16a2cabf83d61cd7.m3u8
+
 其它,#genre#
 [HD]南京信息,https://epg.pw/stream/3b410af631ef86077685d36ae62eccce5a427aba62be65c39edfa08ccb2c7965.m3u8
 [VGA]吉林乡村_(900p)_[not_24/7],https://epg.pw/stream/69c843e9479e054c8323b5a23b74f4f70e8fd3d87354bcbef12195bed8043aeb.m3u8
+[VGA]定州新闻综合,https://epg.pw/stream/e4ac775539e3deda7b1f48dc307097fbcb03725429d1188b393f60124f4e05a9.m3u8
 [HD]山东教育[ipv6],https://epg.pw/stream/67911f1285034e2069916410b1758afbe35aa5930be8eb67a09c995cd5e1243e.m3u8
 [HD]弈坛春秋[ipv6],https://epg.pw/stream/30f944128b104acbf2c203ed41cacc74d5ff3c04461dcde500da89986262c242.m3u8
 [BD]文物宝库,https://epg.pw/stream/e8a4d9f6d3ba5e1e6ff4c1a48e190d72f245bd2afedb8ee0cca017934c8e2830.m3u8
@@ -70,25 +76,17 @@
 [BD]cctv8k超高清[ipv6],https://epg.pw/stream/12c4722b400606e9f17e446f03738627390aa03e60b7cea9a4fe15016cc6e079.m3u8
 [BD]rkb_news_24,https://epg.pw/stream/5c0a5e9b24538982f2adc32190019a57ce3b22128142d163af46657413602453.m3u8
 
-综艺,#genre#
-[BD]乐游频道[ipv6],https://epg.pw/stream/6f6107ff61b3d0a4bbb48c64dda6dde9db12477770ea727b16a2cabf83d61cd7.m3u8
-
 浙江频道,#genre#
 浙江教科,https://ali-m-l.cztv.com/channels/lantian/channel004/1080p.m3u8
 之江纪录,https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
 浙江民生,https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8
 
-央视频道,#genre#
-CGTN英语,https://0472.org/hls/cgtn.m3u8
-CGTN西语,https://0472.org/hls/cgtnx.m3u8
-CGTN阿语,https://0472.org/hls/cgtna.m3u8
-
 Entertainment,#genre#
 5AAB_TV_(720p)_[Not_24/7],http://158.69.124.9:1935/5aabtv/5aabtv/playlist.m3u8
 312_ТВ_(406p),http://176.126.166.43:1935/live/312musik/playlist.m3u8
 A&E_(720p),http://23.239.31.26:8989/aande/index.m3u8
+Antena_HD_(1080p),http://91.246.72.88:8000/play/a005/index.m3u8
 Crime_+_Investigation_(720p),http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/index.m3u8
-FORTUNE_TV_(720p),http://103.215.194.93:8282/hls/fortunetv/vmix.m3u8
 Fuse_(1080p),http://23.237.104.106:8080/USA_FUSE/index.m3u8
 KC2_(720p)_[Not_24/7],http://197.243.19.131:1935/kc2/kc2/chunklist.m3u8
 M2_(1080p),http://88.212.15.19/live/m2_hun/index.m3u8
@@ -106,7 +104,6 @@ TVBS_Asia_(1080p),http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
 Movies,#genre#
 312_Кино_(406p),http://176.126.166.43:1935/live/312kino/playlist.m3u8
 AXN_Poland,http://81.15.109.89:8001/play/AXN
-CCTV-Storm_Theater_(1080p),http://38.75.136.137:98/gslb/dsdqpub/fyjc.m3u8?auth=testpub
 CCTV-The_First_Theater_(1080p),http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub
 De_Pelicula_Latin_America,http://181.119.93.83:8000/play/a1jw/index.m3u8
 Hollywood_HD_(1080p),http://31.148.48.15/MGM_HD/index.m3u8
@@ -142,9 +139,9 @@ A&R_Canal_Adventista_(720p),http://51.222.9.192:3589/stream/play.m3u8
 Al-Bahjah_TV_(1080p),http://202.150.161.117:8000/play/AlBahjahTV
 Alerth_Alnabawi_Channel_(576p),http://82.212.74.2:8000/live/7307.m3u8
 CCTN_47_(1080p)_[Not_24/7],http://122.55.252.134:8443/live/bba5b536faeacb9b56a3239f1ee8e3b3/1.m3u8
+CharityTV_(1080p)_[Not_24/7],http://185.105.4.236:1935/live/ngrp:livestream_all/live.m3u8
 Júbilo_TV_(720p),http://173.249.60.54/hls/jubilotv.m3u8
 Mohabat_TV_(540p),http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8
-Nabawi_TV_(720p),http://202.150.161.117:8000/play/NabawiTV
 Plovdivska_Pravoslavna_TV_(1080p),http://78.130.149.196:1935/live/pptv.stream/playlist.m3u8
 TV_Al_Bayane_(360p),http://69.64.57.208/albayanetv/index.m3u8
 Глас_(576p),http://85.238.112.69:8811/hls_sec/239.0.4.18-.m3u8
@@ -201,7 +198,6 @@ Mithila_Nepal_TV_(1080p),http://150.107.205.212:1935/live/mithila/playlist.m3u8?
 ORTB_TV_(720p),http://69.64.57.208/ortb/playlist.m3u8
 ORTM_1_(540p)_[Not_24/7],http://69.64.57.208/ortm/playlist.m3u8
 Padang_TV_(720p)_[Not_24/7],http://122.248.43.242:1935/PADANGTV/_definst_/myStream/playlist.m3u8
-Primer_TV_(1080p),http://200.194.238.229:8383/live/primer/playlist.m3u8
 Ràdio_Bocairent_TV_(1080p)_[Not_24/7],http://185.81.77.4/BocairentTV/index.m3u8
 Radiocanal_San_Francisco_(1080p),http://204.199.3.2/.m3u8
 RecordTV_Interior_SP,http://200.77.176.130:8000/udp/224.0.0.4:49152
@@ -263,12 +259,12 @@ RTL_(1080p),http://46.149.191.217:9005/play/a018
 RTL_Harom_(1080p),http://46.149.191.217:9005/play/a01t
 RTL_Ketto_(1080p),http://46.149.191.217:9005/play/a01r
 RTS_3_(720p),http://185.81.240.65:15000/udp/233.233.233.36:12000
+Sardari_TV_(1080p)_[Not_24/7],http://158.69.124.9:1935/sardaritv/sardaritv/playlist.m3u8
 Satranç_TV_(480p)_[Not_24/7],http://139.162.182.79/live/test/index.m3u8
 SBT_TV,http://122.155.12.107:1935/live/sbt_tv_aac_300/playlist.m3u8
 Senses_TV_(1080p),http://31.14.41.69:8080/hls/sensesonline/index.m3u8
 Showtime_(1080p),http://23.237.104.106:8080/USA_SHOWTIME/index.m3u8
 Stopklatka_TV_(1080p),http://91.246.72.88:8000/play/a007/index.m3u8
-Superstacja_(1080p),http://91.246.72.88:8000/play/a009/index.m3u8
 Tele5_(576p),http://78.130.250.2:8023/play/a05s/index.m3u8
 Telemicro_Internacional_(480p),http://200.115.120.1:8000/play/ca085/index.m3u8
 Telemolise_(1080p),http://185.202.128.1:1935/TelemoliseStream/telemoliseTV.stream/playlist.m3u8
@@ -357,7 +353,6 @@ Kapaz_TV,http://85.132.78.122:8050/hls/stream/index.m3u8
 MS_NOW_(720p),http://41.205.93.154/MSNBC/index.m3u8
 Probashi_TV_News_(1080p),http://158.69.24.53:8080/probashi_tv/index.m3u8
 Star_Bharat_(576p),http://103.253.18.58:8000/play/a00u
-TVC_News_(576p),http://69.64.57.208/tvcnews/playlist.m3u8
 
 Sports,#genre#
 CCTV-Billiards_(1080p),http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub

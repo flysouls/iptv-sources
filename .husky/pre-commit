@@ -1,3 +1,3 @@
 npm run verify
 git add verified/
-git commit -n --amend --no-edit
+git commit -n --no-edit -m 'chore: auto verify'
