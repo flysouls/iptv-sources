@@ -33,7 +33,7 @@
     "cross-env": "^7.0.3",
     "husky": "^9.1.7",
     "nodemon": "^3.1.4",
-    "tsup": "8.2.4",
+    "tsup": "8.5.1",
     "typescript": "5.5.4"
   },
   "dependencies": {
