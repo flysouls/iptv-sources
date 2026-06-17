@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPTV Sources</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; padding: 2rem; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #f8fafc; }
+  .subtitle { color: #94a3b8; margin-bottom: 2rem; font-size: 0.9rem; }
+  .section { margin-bottom: 2rem; }
+  .section h2 { font-size: 1.1rem; color: #38bdf8; margin-bottom: 0.8rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.4rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; }
+  a.item { display: block; padding: 0.6rem 1rem; background: #1e293b; border-radius: 6px; color: #e2e8f0; text-decoration: none; font-size: 0.85rem; transition: background 0.15s; border: 1px solid #334155; }
+  a.item:hover { background: #334155; border-color: #38bdf8; }
+  a.item .path { color: #38bdf8; font-family: monospace; }
+  a.item .desc { color: #94a3b8; font-size: 0.75rem; margin-top: 2px; }
+  .badge { display: inline-block; background: #065f46; color: #6ee7b7; font-size: 0.65rem; padding: 1px 6px; border-radius: 3px; margin-left: 6px; }
+  .footer { margin-top: 3rem; color: #475569; font-size: 0.8rem; text-align: center; }
+  .footer a { color: #38bdf8; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>IPTV Sources</h1>
+  <p class="subtitle">多源聚合 IPTV 直播列表，自动抓取 + 去重 + 验证</p>
+
+  <div class="section">
+    <h2>聚合产物</h2>
+    <div class="grid">
+      <a class="item" href="/aggregated.m3u">
+        <div class="path">/aggregated.m3u</div>
+        <div class="desc">全量聚合 M3U</div>
+      </a>
+      <a class="item" href="/aggregated">
+        <div class="path">/aggregated</div>
+        <div class="desc">全量聚合 M3U（无扩展名）</div>
+      </a>
+      <a class="item" href="/txt/aggregated.txt">
+        <div class="path">/txt/aggregated.txt</div>
+        <div class="desc">全量聚合 TXT 格式</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>本地验证频道 <span class="badge">verified</span></h2>
+    <div class="grid">
+      <a class="item" href="/cn.m3u">
+        <div class="path">/cn.m3u</div>
+        <div class="desc">验证后的中国频道 M3U</div>
+      </a>
+      <a class="item" href="/cn">
+        <div class="path">/cn</div>
+        <div class="desc">验证后的中国频道 M3U（无扩展名）</div>
+      </a>
+      <a class="item" href="/txt/cn.txt">
+        <div class="path">/txt/cn.txt</div>
+        <div class="desc">验证后的中国频道 TXT</div>
+      </a>
+      <a class="item" href="/txt/cn">
+        <div class="path">/txt/cn</div>
+        <div class="desc">验证后的中国频道 TXT（无扩展名）</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>分源列表</h2>
+    <div class="grid">
+      <a class="item" href="/all.m3u"><div class="path">/all.m3u</div><div class="desc">全部频道</div></a>
+      <a class="item" href="/cn.m3u"><div class="path">/cn.m3u</div><div class="desc">中国频道</div></a>
+      <a class="item" href="/cn_c.m3u"><div class="path">/cn_c.m3u</div><div class="desc">中国 CCTV</div></a>
+      <a class="item" href="/cn_n.m3u"><div class="path">/cn_n.m3u</div><div class="desc">中国 NewTV</div></a>
+      <a class="item" href="/cn_p.m3u"><div class="path">/cn_p.m3u</div><div class="desc">中国 地方台</div></a>
+      <a class="item" href="/o_all.m3u"><div class="path">/o_all.m3u</div><div class="desc">iptv-org 全部</div></a>
+      <a class="item" href="/o_cn.m3u"><div class="path">/o_cn.m3u</div><div class="desc">iptv-org 中国</div></a>
+      <a class="item" href="/o_s_cn.m3u"><div class="path">/o_s_cn.m3u</div><div class="desc">iptv-org 中国流</div></a>
+      <a class="item" href="/o_s_cn_cctv.m3u"><div class="path">/o_s_cn_cctv.m3u</div><div class="desc">iptv-org CCTV</div></a>
+      <a class="item" href="/o_s_cn_cgtn.m3u"><div class="path">/o_s_cn_cgtn.m3u</div><div class="desc">iptv-org CGTN</div></a>
+      <a class="item" href="/o_s_cn_112114.m3u"><div class="path">/o_s_cn_112114.m3u</div><div class="desc">iptv-org 112114</div></a>
+      <a class="item" href="/fmml_ipv6.m3u"><div class="path">/fmml_ipv6.m3u</div><div class="desc">fanmingming IPv6</div></a>
+      <a class="item" href="/fmml_itv.m3u"><div class="path">/fmml_itv.m3u</div><div class="desc">fanmingming ITV</div></a>
+      <a class="item" href="/fmml_index.m3u"><div class="path">/fmml_index.m3u</div><div class="desc">fanmingming Index</div></a>
+      <a class="item" href="/q_bj_iptv_mobile.m3u"><div class="path">/q_bj_iptv_mobile.m3u</div><div class="desc">北京 IPTV 移动</div></a>
+      <a class="item" href="/q_bj_iptv_mobile_m.m3u"><div class="path">/q_bj_iptv_mobile_m.m3u</div><div class="desc">北京 IPTV 移动 M</div></a>
+      <a class="item" href="/q_bj_iptv_unicom.m3u"><div class="path">/q_bj_iptv_unicom.m3u</div><div class="desc">北京 IPTV 联通</div></a>
+      <a class="item" href="/q_bj_iptv_unicom_m.m3u"><div class="path">/q_bj_iptv_unicom_m.m3u</div><div class="desc">北京 IPTV 联通 M</div></a>
+      <a class="item" href="/y_g.m3u"><div class="path">/y_g.m3u</div><div class="desc">YueChan M3U</div></a>
+      <a class="item" href="/ycl_iptv.m3u"><div class="path">/ycl_iptv.m3u</div><div class="desc">YCL IPTV</div></a>
+      <a class="item" href="/j_home.m3u"><div class="path">/j_home.m3u</div><div class="desc">JoeVess Home</div></a>
+      <a class="item" href="/j_iptv.m3u"><div class="path">/j_iptv.m3u</div><div class="desc">JoeVess IPTV</div></a>
+      <a class="item" href="/cymz6_lives.m3u"><div class="path">/cymz6_lives.m3u</div><div class="desc">cymz6 Lives</div></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Powered by <a href="https://github.com/flysouls/iptv-sources">flysouls/iptv-sources</a></p>
+    <p style="margin-top:0.3rem">Auto-updated every 2 hours via GitHub Actions</p>
+  </div>
+</div>
+</body>
+</html>

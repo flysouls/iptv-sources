@@ -8,3 +8,4 @@ back
 
 .env
 config
+yarn-error.log

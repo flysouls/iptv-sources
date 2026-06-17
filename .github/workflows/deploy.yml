@@ -26,28 +26,33 @@ jobs:
           node-version: 20.x
           cache: "npm"
 
-      - name: Install yarn
-        run: npm install yarn -g
-
-      - run: yarn install
-      - run: yarn build
+      - run: npm install
+      - run: npm run build
 
       - name: Fetch and generate M3U sources
-        run: yarn m3u
+        run: npm run m3u
 
-      - run: yarn matrix
+      - run: npm run matrix
 
-      - name: "Jekyll theme"
-        run: cp ./_config.temp.yml ./m3u/_config.yml
+      - name: Copy verified channels
+        run: |
+          if [ -d "verified" ]; then
+            cp -r verified/* m3u/ 2>/dev/null || true
+            echo "Copied verified/ to m3u/"
+          else
+            echo "No verified/ directory, skipping"
+          fi
+
+      - name: Copy index page
+        run: cp public/index.html m3u/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          source: ./m3u
-          destination: ./_site
+          path: ./m3u
 
       - name: Upload aggregated artifacts
         uses: actions/upload-artifact@v4
@@ -57,9 +62,6 @@ jobs:
             m3u/aggregated.m3u
             m3u/txt/aggregated.txt
           retention-days: 30
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:

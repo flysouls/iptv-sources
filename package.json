@@ -14,12 +14,13 @@
     "serve:dev": "nodemon ./dist/serve.js",
     "matrix": "node ./dist/matrix.js",
     "aggregate": "node ./dist/aggregate.js",
-    "verify": "node ./dist/aggregate.js --check",
+    "verify": "node ./dist/verify.js",
     "release": "node ./scripts/release.js",
     "docker:build": "docker buildx build -t herberthe0229/iptv-sources:latest --platform=linux/arm64,linux/amd64,linux/arm/v8,linux/arm/v7 . --push",
     "docker:build:dev": "docker buildx build -t herberthe0229/iptv-sources:dev --platform=linux/arm64,linux/amd64,linux/arm/v8,linux/arm/v7 . --push",
     "docker:build:local": "docker buildx build -t herberthe0229/iptv-sources:dev --platform=linux/arm64,linux/amd64,linux/arm/v8,linux/arm/v7 .",
-    "push": "yarn release && git push && yarn docker:build"
+    "push": "npm run release && git push && npm run docker:build",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@rollup/wasm-node": "4.20.0",
@@ -30,6 +31,7 @@
     "@types/node": "22.2.0",
     "@types/opencc-js": "1.0.3",
     "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
     "nodemon": "^3.1.4",
     "tsup": "8.2.4",
     "typescript": "5.5.4"

@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup"
 
 export const tsup = defineConfig({
-    entry: ["src/index.ts", "src/serve.ts", "src/matrix.ts", "src/aggregate.ts"],
+    entry: ["src/index.ts", "src/serve.ts", "src/matrix.ts", "src/aggregate.ts", "src/verify.ts"],
     outDir: "dist",
     clean: true,
     format: ["esm"],
