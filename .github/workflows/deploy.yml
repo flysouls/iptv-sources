@@ -34,10 +34,6 @@ jobs:
 
       - name: Fetch and generate M3U sources
         run: yarn m3u
-        env:
-          ENABLE_STREAM_CHECK: "true"
-          STREAM_CHECK_TIMEOUT: "5000"
-          STREAM_CHECK_CONCURRENCY: "30"
 
       - run: yarn matrix
 
