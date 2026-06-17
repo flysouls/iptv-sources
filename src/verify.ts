@@ -72,7 +72,7 @@ const verify = async () => {
     // 3. 本地网络批量检测
     const results = await checkStreamsBatch(
         streams,
-        undefined,
+        1000,
         (checked, total) => {
             if (checked % 200 === 0 || checked === total) {
                 console.log(`[VERIFY] Progress: ${checked}/${total}`)
@@ -117,7 +117,11 @@ const verify = async () => {
     console.log(`[VERIFY] Done! ${available.length} verified channels ready.`)
 }
 
-verify().catch((e) => {
-    console.error(e)
-    process.exit(1)
-})
+verify()
+    .then(() => {
+        process.exit(0)
+    })
+    .catch((e) => {
+        console.error(e)
+        process.exit(1)
+    })
