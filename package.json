@@ -28,7 +28,7 @@
     "@types/koa-router": "^7.4.8",
     "@types/koa-static": "4.0.4",
     "@types/markdown-it": "14.1.2",
-    "@types/node": "22.2.0",
+    "@types/node": "25.9.3",
     "@types/opencc-js": "1.0.3",
     "cross-env": "^7.0.3",
     "husky": "^9.1.7",
